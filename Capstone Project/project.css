@@ -1,0 +1,198 @@
+/* === General Page Setup === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+/* === Header and Navigation === */
+header {
+  background: #004080;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin-right: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Hero Section === */
+.hero {
+  background: #e6f0ff;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* === Main Content === */
+main {
+  padding: 20px;
+}
+
+main h2, main h3 {
+  color: #004080;
+}
+
+/* === Footer === */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* === Table Styles === */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9fafc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.project-table th {
+  background-color: #0077b6;
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.project-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.project-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.project-table tr:hover {
+  background-color: #e3f2fd;
+  transition: background-color 0.3s;
+}
+
+.project-table td:first-child {
+  font-weight: bold;
+}
+
+/* === Responsive Table === */
+@media (max-width: 700px) {
+  .project-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* === Form Section === */
+.project-form {
+  background-color: #e6f0ff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.project-form h3 {
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.project-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-form label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.project-form input,
+.project-form select,
+.project-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.project-form input:focus,
+.project-form select:focus,
+.project-form textarea:focus {
+  border-color: #0077b6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,119,182,0.3);
+}
+
+.project-form button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.project-form button:hover {
+  background-color: #005f8a;
+  transition: background-color 0.3s ease;
+}
+
+/* === Responsive Form === */
+@media (max-width: 768px) {
+  .project-form {
+    padding: 15px;
+  }
+
+  .project-form form {
+    width: 100%;
+  }
+
+  .project-form input,
+  .project-form select,
+  .project-form textarea,
+  .project-form button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* === Responsive Navigation === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+}
