@@ -23,6 +23,7 @@ nav ul {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
 }
 
 nav li {
@@ -35,7 +36,8 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   text-decoration: underline;
 }
 
@@ -46,12 +48,18 @@ nav a:hover {
   padding: 2rem;
 }
 
+.hero h2 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
 /* === Main Content === */
 main {
   padding: 20px;
 }
 
-main h2, main h3 {
+main h2, 
+main h3 {
   color: #004080;
 }
 
@@ -69,7 +77,6 @@ footer {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  font-family: Arial, sans-serif;
   background-color: #f9fafc;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -165,6 +172,47 @@ footer {
 .project-form button:hover {
   background-color: #005f8a;
   transition: background-color 0.3s ease;
+}
+
+/* === Image Gallery === */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* === Details & Summary Widget === */
+details {
+  background: #f8f8f8;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  color: #004080;
+}
+
+summary:hover {
+  color: #007acc;
 }
 
 /* === Responsive Form === */
