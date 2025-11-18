@@ -221,10 +221,6 @@ summary:hover {
     padding: 15px;
   }
 
-  .project-form form {
-    width: 100%;
-  }
-
   .project-form input,
   .project-form select,
   .project-form textarea,
@@ -243,7 +239,10 @@ summary:hover {
   nav li {
     margin: 10px 0;
   }
-}.product-card {
+}
+
+/* === Product Cards === */
+.product-card {
   background: #fff;
   padding: 20px;
   margin-top: 20px;
@@ -264,5 +263,3 @@ summary:hover {
 .buy-btn:hover {
   background: #005f8a;
 }
-
-
