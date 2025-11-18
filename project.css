@@ -243,4 +243,26 @@ summary:hover {
   nav li {
     margin: 10px 0;
   }
+}.product-card {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+.buy-btn {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.buy-btn:hover {
+  background: #005f8a;
+}
+
+
