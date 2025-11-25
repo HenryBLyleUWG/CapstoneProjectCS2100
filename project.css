@@ -1,4 +1,6 @@
-/* === General Page Setup === */
+/* =========================================================
+   GLOBAL BASE STYLES
+   ========================================================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,7 +9,9 @@ body {
   background-color: #f9f9f9;
 }
 
-/* === Header and Navigation === */
+/* =========================================================
+   HEADER & NAVIGATION
+   ========================================================= */
 header {
   background: #004080;
   color: white;
@@ -21,9 +25,9 @@ header h1 {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
 }
 
 nav li {
@@ -41,7 +45,19 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* === Hero Section === */
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: 10px 0;
+  }
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
 .hero {
   background: #e6f0ff;
   text-align: center;
@@ -53,17 +69,21 @@ nav a.active {
   margin-bottom: 10px;
 }
 
-/* === Main Content === */
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 main {
   padding: 20px;
 }
 
-main h2, 
+main h2,
 main h3 {
   color: #004080;
 }
 
-/* === Footer === */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 footer {
   background: #333;
   color: white;
@@ -72,7 +92,9 @@ footer {
   margin-top: 20px;
 }
 
-/* === Table Styles === */
+/* =========================================================
+   TABLE STYLING
+   ========================================================= */
 .project-table {
   width: 100%;
   border-collapse: collapse;
@@ -101,14 +123,14 @@ footer {
 
 .project-table tr:hover {
   background-color: #e3f2fd;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .project-table td:first-child {
   font-weight: bold;
 }
 
-/* === Responsive Table === */
+/* Responsive Table */
 @media (max-width: 700px) {
   .project-table {
     display: block;
@@ -117,7 +139,9 @@ footer {
   }
 }
 
-/* === Form Section === */
+/* =========================================================
+   FORM STYLING
+   ========================================================= */
 .project-form {
   background-color: #e6f0ff;
   padding: 20px;
@@ -128,7 +152,6 @@ footer {
 
 .project-form h3 {
   color: #004080;
-  margin-bottom: 15px;
 }
 
 .project-form form {
@@ -171,10 +194,19 @@ footer {
 
 .project-form button:hover {
   background-color: #005f8a;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
-/* === Image Gallery === */
+/* Responsive Form */
+@media (max-width: 768px) {
+  .project-form {
+    padding: 15px;
+  }
+}
+
+/* =========================================================
+   IMAGE GALLERY (for slideshow + visual features)
+   ========================================================= */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -196,7 +228,18 @@ footer {
   transform: scale(1.05);
 }
 
-/* === Details & Summary Widget === */
+/* Slideshow container for jQuery plugin */
+.slideshow {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* =========================================================
+   DETAILS / SUMMARY EXPANDABLE WIDGET
+   ========================================================= */
 details {
   background: #f8f8f8;
   padding: 10px 15px;
@@ -215,39 +258,26 @@ summary:hover {
   color: #007acc;
 }
 
-/* === Responsive Form === */
-@media (max-width: 768px) {
-  .project-form {
-    padding: 15px;
-  }
-
-  .project-form input,
-  .project-form select,
-  .project-form textarea,
-  .project-form button {
-    width: 100%;
-    font-size: 1rem;
-  }
-}
-
-/* === Responsive Navigation === */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav li {
-    margin: 10px 0;
-  }
-}
-
-/* === Product Cards === */
+/* =========================================================
+   PRODUCT PAGE STYLING
+   ========================================================= */
 .product-card {
   background: #fff;
   padding: 20px;
-  margin-top: 20px;
+  margin: 20px auto;
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-card h3 {
+  color: #004080;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .buy-btn {
@@ -262,4 +292,12 @@ summary:hover {
 
 .buy-btn:hover {
   background: #005f8a;
+}
+
+/* Product Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
