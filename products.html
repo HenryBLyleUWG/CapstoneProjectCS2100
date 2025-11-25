@@ -72,5 +72,19 @@
   <footer>
     <p>&copy; 2025 STEM Hub | <a href="about.html">Contact Us</a></p>
   </footer>
+  <script>
+  function validateForm() {
+    let name = document.getElementById("studentName").value.trim();
+    let project = document.getElementById("projectTitle").value.trim();
+
+    if (name === "" || project === "") {
+      alert("Please fill out all required fields.");
+      return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+  }
+</script>
 </body>
 </html>
